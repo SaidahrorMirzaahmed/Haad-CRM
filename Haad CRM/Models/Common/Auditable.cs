@@ -6,5 +6,5 @@ public abstract class Auditable
     public bool IsDeleted { get; set; }
     public DateTime CreatAt { get; set; }  = DateTime.UtcNow;
     public DateTime UpdateAt { get; set; }
-    public DateTime DeletedAd { get; set; }
+    public DateTime DeletedAt { get; set; }
 }
