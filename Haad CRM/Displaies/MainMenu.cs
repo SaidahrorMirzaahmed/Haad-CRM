@@ -12,6 +12,7 @@ public class MainMenu
     public readonly TeacherService teacherService;
     public readonly StudentService studentService;
     public readonly AttendanceService attendanceService;
+    public readonly AdminService adminService;
 
     public readonly NewMenu newMenu;
     public readonly BallMenu ballMenu;
@@ -21,6 +22,7 @@ public class MainMenu
     public readonly StudentMenu studentMenu;
     public readonly TeacherMenu teacherMenu;
     public readonly AttendanceMenu attendanceMenu;
+    public readonly AdminMenu adminMenu;
 
     public MainMenu()
     {
@@ -32,6 +34,7 @@ public class MainMenu
         newService = new NewService();
         groupService = new GroupService();
         courseService = new CourseService();
+        adminService = new AdminService();
 
         studentMenu = new StudentMenu();
         teacherMenu = new TeacherMenu();
@@ -41,19 +44,36 @@ public class MainMenu
         newMenu = new NewMenu();
         groupMenu = new GroupMenu();
         courseMenu = new CourseMenu();
+        adminMenu = new AdminMenu();
     }
     public async Task Menu()
     {
         bool check = true;
         while (check)
         {
-            var fruit = AnsiConsole.Prompt(
+            AnsiConsole.Write(
+                new FigletText("Main Menu")
+                    .LeftJustified()
+                    .Color(Color.Gold1));
+            var choose= AnsiConsole.Prompt(
             new SelectionPrompt<string>()
             .PageSize(10)
             .MoreChoicesText("[grey](Move up and down to reveal more fruits)[/]")
             .AddChoices(new[] {
                 "Admin", "Student", "Teacher",
             }));
+            switch (choose)
+            {
+                case "Admin":
+                    await adminMenu.Menu();
+                    break;
+                case "Student":
+                    await studentMenu.Menu();
+                    break;
+                case "Teacher":
+                    await teacherMenu.Menu();   
+                    break;
+            }
         }
     }
 }

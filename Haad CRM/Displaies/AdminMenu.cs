@@ -2,4 +2,8 @@
 
 public class AdminMenu
 {
+    public async Task Menu()
+    {
+
+    }
 }
