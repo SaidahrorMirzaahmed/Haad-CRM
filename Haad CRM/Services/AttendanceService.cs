@@ -24,6 +24,9 @@ public class AttendanceService : IAttendanceService
         var resultAttendance = attendances.FirstOrDefault(attendance => attendance.Id == id)
             ?? throw new Exception("Not found attendance with this id");
 
+        resultAttendance.IsDeleted = true;
+        resultAttendance.DeletedAt = DateTime.UtcNow;
+
         return attendances.Remove(resultAttendance);
     }
 
@@ -40,16 +43,18 @@ public class AttendanceService : IAttendanceService
         return resultAttendance.MapTo<AttendanceViewModel>();
     }
 
-    public Task<AttendanceViewModel> UpdateAsync(AttendanceUpdate attendance, long id)
+    public async Task<AttendanceViewModel> UpdateAsync(AttendanceUpdate attendance, long id)
     {
         var resultAttendance = attendances.FirstOrDefault(attendance => attendance.Id == id)
             ?? throw new Exception("Not found attendance with this id");
 
         resultAttendance.Id = id;
-        resultAttendance.UpdateAt = DateTime.Now;
+        resultAttendance.UpdateAt = DateTime.UtcNow;
         resultAttendance.Status = attendance.Status;
         resultAttendance.GroupId = attendance.GroupId;
         resultAttendance.StudentId = attendance.StudentId;
         resultAttendance.AttendanceDate = attendance.AttendanceDate;
+
+        return resultAttendance.MapTo<AttendanceViewModel>();
     }
 }
