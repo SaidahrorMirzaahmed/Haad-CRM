@@ -1,4 +1,4 @@
-﻿namespace Haad_CRM.Models.Attendance;
+﻿namespace Haad_CRM.Models.Attendances;
 
 using Haad_CRM.Models.Common;
 using System;
