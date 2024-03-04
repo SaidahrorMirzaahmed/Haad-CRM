@@ -11,7 +11,7 @@ public interface IGroupService
 
     Task<GroupViewModel> GetByIdAsync(long id);
 
-    Task<GroupViewModel> UpdateAsync(GroupCreation group, long id);
+    Task<GroupViewModel> UpdateAsync(GroupCreation group, long id,bool isDeleted);
 
     Task<List<GroupViewModel>> GetAllAsync();
 }

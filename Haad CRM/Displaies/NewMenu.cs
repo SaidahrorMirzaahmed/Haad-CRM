@@ -2,5 +2,9 @@
 {
     public class NewMenu
     {
+        public async Task Menu()
+        {
+
+        }
     }
 }

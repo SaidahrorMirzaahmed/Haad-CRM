@@ -2,4 +2,8 @@
 
 public class LessonMenu
 {
+    public async Task Menu()
+    {
+
+    }
 }

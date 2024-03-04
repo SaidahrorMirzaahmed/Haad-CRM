@@ -1,17 +1,11 @@
 ﻿using Haad_CRM.Helpers;
 using Haad_CRM.Interfaces;
-using Haad_CRM.Models.Attendance;
 using Haad_CRM.Models.Ball;
 
 namespace Haad_CRM.Services;
 
 public class BallService : IBallService
 {
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> master
     private readonly List<Ball> balls;
     public BallService()
     {
@@ -54,11 +48,9 @@ public class BallService : IBallService
             ?? throw new Exception("Not found ball with this id");
 
         resultBall.Id = id;
-<<<<<<< HEAD
         resultBall.Comment = ball.Comment;
-=======
-        resultBall.Comment = ball.Comment;ru
->>>>>>> master
+        resultBall.Comment = ball.Comment;
+        resultBall.Comment = ball.Comment;
         resultBall.CoinMark = ball.CoinMark;
         resultBall.UpdateAt = DateTime.UtcNow;
         resultBall.TotalCoin = ball.TotalCoin;
@@ -66,8 +58,4 @@ public class BallService : IBallService
         return resultBall.MapTo<BallViewModel>();
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> master
 }
