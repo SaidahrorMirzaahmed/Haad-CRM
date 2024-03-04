@@ -2,4 +2,8 @@
 
 public class CourseMenu
 {
+    public async Task Menu()
+    {
+
+    }
 }

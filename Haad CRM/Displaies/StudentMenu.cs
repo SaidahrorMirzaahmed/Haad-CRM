@@ -5,7 +5,10 @@ namespace Haad_CRM.Displaies;
 
 public class StudentMenu
 {
+    public readonly NewMenu NewMenu;
+    public readonly StudentMenu studentMenu;
     public readonly StudentService StudentService;
+    public readonly AttendanceMenu AttendanceMenu;
     public async Task Menu()
     {
         Console.Clear();
@@ -17,7 +20,8 @@ public class StudentMenu
         string password = Console.ReadLine();
 
         var students = await StudentService.GetAllAsync();
-        if(students.FirstOrDefault(student => student.Email == email && student.Password == password)
+        var student = students.FirstOrDefault(student => student.Email == email && student.Password == password);
+        if(student is not null)
         {
             bool check = true;
             while (check)
@@ -31,21 +35,24 @@ public class StudentMenu
                 .PageSize(10)
                 .MoreChoicesText("[grey](Move up and down to reveal more fruits)[/]")
                 .AddChoices(new[] {
-                "Attendance", "Lesson", "News","Settings","Back"
+                "Attendance", "Lesson", "News","TimeTable","Rating","Settings","Back"
                 }));
                 switch (choose)
                 {
                     case "Attendance":
+                        await AttendanceMenu.Menu(student.Id);
                         break;
                     case "Lesson":
-                        await studentMenu.Menu();
+                        await studentMenu.Menu(student.Id);
                         break;
                     case "News":
+                        await NewMenu.Menu(student.Id);
+                        break;
+                    case "TimeTable":
+                        break;
+                    case "Rating":
                         break;
                     case "Settings":
-                        check = false;
-                        break;
-                    case "Teacher":
                         break;
                     case "Back":
                         check = false;

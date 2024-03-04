@@ -2,4 +2,8 @@
 
 public class AttendanceMenu
 {
+    public async Task Menu()
+    {
+
+    }
 }
