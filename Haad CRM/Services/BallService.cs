@@ -1,6 +1,5 @@
 ﻿using Haad_CRM.Helpers;
 using Haad_CRM.Interfaces;
-using Haad_CRM.Models.Attendance;
 using Haad_CRM.Models.Ball;
 
 namespace Haad_CRM.Services;
