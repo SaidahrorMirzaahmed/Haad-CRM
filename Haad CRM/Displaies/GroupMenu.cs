@@ -2,4 +2,8 @@
 
 public class GroupMenu
 {
+    public async Task Menu()
+    {
+
+    }
 }
