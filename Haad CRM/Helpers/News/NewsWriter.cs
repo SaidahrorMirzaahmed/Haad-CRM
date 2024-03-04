@@ -33,7 +33,7 @@ public class NewsWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", news.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", news.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", news.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", news.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", news.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

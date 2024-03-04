@@ -35,7 +35,7 @@ public class CourseWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", course.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", course.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", course.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", course.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", course.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

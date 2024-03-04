@@ -33,7 +33,7 @@ public class LessonWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", lesson.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", lesson.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", lesson.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", lesson.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", lesson.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

@@ -23,7 +23,7 @@ public class TeacherReader
             {
                 Teacher teacher = new Teacher
                 {
-                    ID = reader.GetInt64(0),
+                    Id = reader.GetInt64(0),
                     FirstName = reader.GetString(1),
                     LastName = reader.GetString(2),
                     Phone = reader.GetString(3),
@@ -32,7 +32,7 @@ public class TeacherReader
                     IsDeleted = reader.GetBoolean(5),
                     CreatAt = DateTime.Parse(reader.GetString(6)),
                     UpdateAt = DateTime.Parse(reader.GetString(7)),
-                    DeletedAd = DateTime.Parse(reader.GetString(8))
+                    DeletedAt = DateTime.Parse(reader.GetString(8))
                 };
 
                 teacherList.Add(teacher);

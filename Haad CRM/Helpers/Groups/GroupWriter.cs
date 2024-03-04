@@ -38,7 +38,7 @@ public class GroupWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", group.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", group.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", group.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", group.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", group.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

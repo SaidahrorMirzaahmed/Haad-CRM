@@ -38,7 +38,7 @@ public class TeacherWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", teacher.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", teacher.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", teacher.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", teacher.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", teacher.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

@@ -32,7 +32,7 @@ public class RatingReader
                     IsDeleted = reader.GetBoolean(4),
                     CreatAt = reader.GetDateTime(5),
                     UpdateAt = reader.GetDateTime(6),
-                    DeletedAd = reader.GetDateTime(7)
+                    DeletedAt = reader.GetDateTime(7)
                 };
 
                 ballList.Add(ball);

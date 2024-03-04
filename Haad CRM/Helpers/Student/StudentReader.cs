@@ -38,7 +38,7 @@ public class StudentReader
                     IsDeleted = reader.GetBoolean(10),
                     CreatAt = DateTime.Parse(reader.GetString(11)),
                     UpdateAt = DateTime.Parse(reader.GetString(12)),
-                    DeletedAd = DateTime.Parse(reader.GetString(13))
+                    DeletedAt = DateTime.Parse(reader.GetString(13))
                 };
 
                 studentList.Add(student);

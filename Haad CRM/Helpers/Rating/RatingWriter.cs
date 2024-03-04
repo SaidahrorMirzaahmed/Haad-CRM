@@ -32,7 +32,7 @@ public class RatingWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", ball.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", ball.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", ball.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", ball.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", ball.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

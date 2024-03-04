@@ -38,7 +38,7 @@ public class StudentWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", student.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", student.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", student.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", student.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", student.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

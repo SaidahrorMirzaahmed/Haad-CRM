@@ -32,7 +32,7 @@ public class AttendanceReader
                     IsDeleted = reader.GetBoolean(5),
                     CreatAt = DateTime.Parse(reader.GetString(6)),
                     UpdateAt = DateTime.Parse(reader.GetString(7)),
-                    DeletedAd = DateTime.Parse(reader.GetString(8))
+                    DeletedAt = DateTime.Parse(reader.GetString(8))
                 };
 
                 attendanceList.Add(attendance);

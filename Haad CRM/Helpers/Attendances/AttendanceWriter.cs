@@ -32,7 +32,7 @@ public class AttendanceWriter
                 insertCommand.Parameters.AddWithValue("@IsDeleted", attendance.IsDeleted);
                 insertCommand.Parameters.AddWithValue("@CreatedAt", attendance.CreatAt.ToString());
                 insertCommand.Parameters.AddWithValue("@UpdatedAt", attendance.UpdateAt.ToString());
-                insertCommand.Parameters.AddWithValue("@DeletedAt", attendance.DeletedAd.ToString());
+                insertCommand.Parameters.AddWithValue("@DeletedAt", attendance.DeletedAt.ToString());
 
                 insertCommand.ExecuteNonQuery();
             }

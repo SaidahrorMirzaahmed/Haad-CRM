@@ -36,7 +36,7 @@ public class CourseReader
                     IsDeleted = reader.GetBoolean(8),
                     CreatAt = reader.GetDateTime(9),
                     UpdateAt = reader.GetDateTime(10),
-                    DeletedAd = reader.GetDateTime(11)
+                    DeletedAt = reader.GetDateTime(11)
                 };
 
                 courseList.Add(course);
